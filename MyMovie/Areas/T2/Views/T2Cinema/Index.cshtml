@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MyMovie.Areas.T2.Models.T2Cinema>
+
+@{
+    ViewBag.Title = "Index";
+}
+<p id="1">所选电影：@ViewBag.Result</p>
+<p>------------------------------------------</p>
+<h2>影院信息</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <div class="cinema-info">
+                    <p class="cinema-name" data-act="cinema-name-click" data-bid="b_wek7vrx9" data-val="{city_id: 235, cinema_id: 25775}">@Html.DisplayFor(modelItem => item.CinemaName)</p>
+                    <p class="cinema-address">@Html.DisplayFor(modelItem => item.Adderss)</p>
+                </div>
+
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MiniPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other)
+            </td>
+            <td>
+                <div class="buy-btn">
+                    <a href="@Url.Action("Index","T2Table",new{area="T2",id=item.CinemaId})" data-act="buy-btn-click" data-val="{city_id: 235, cinema_id: 25775}" data-bid="b_wek7vrx9">选座购票</a>
+                </div>
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.CinemaId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.CinemaId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.CinemaId })
+                </td>*@
+        </tr>
+    }
+
+</table>

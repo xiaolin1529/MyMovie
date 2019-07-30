@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MyMovie.Areas.T3.Models.MovieTables>
+@{
+    ViewBag.Title = "Add";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.MovieID)</th>
+        <th>@Html.DisplayNameFor(model => model.MovieImage)</th>
+        <th>@Html.DisplayNameFor(model => model.MovieName)</th>
+        <th>@Html.DisplayNameFor(model => model.MovieGrade)</th>
+        <th>@Html.DisplayNameFor(model => model.Type)</th>
+        <th>@Html.DisplayNameFor(model => model.Areas)</th>
+        <th>@Html.DisplayNameFor(model => model.Years)</th>
+        <th>@Html.DisplayNameFor(model => model.MvType1)</th>
+        <th>@Html.DisplayNameFor(model => model.Language)</th>
+        <th>@Html.DisplayNameFor(model => model.ShowTime)</th>
+        <th>更多</th>
+        <th>操作</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.MovieID) </td>
+            <td align="center"><img src="~/comment/ImageTotal/@Html.DisplayFor(modelItem => item.MovieImage)" style="height:50px;width:40px" /></td>
+            <td>@Html.DisplayFor(modelItem => item.MovieName) </td>
+            <td>@Html.DisplayFor(modelItem => item.MovieGrade) </td>
+            <td>@Html.DisplayFor(modelItem => item.Type) </td>
+            <td>@Html.DisplayFor(modelItem => item.Areas) </td>
+            <td>@Html.DisplayFor(modelItem => item.Years) </td>
+            <td>@Html.DisplayFor(modelItem => item.MvType1)</td>
+            <td>@Html.DisplayFor(modelItem => item.Language)</td>
+            <td>@Html.DisplayFor(modelItem => item.ShowTime)</td>
+            <td>......</td>
+            <td>
+                @Html.ActionLink("删除", "Delete", new { id = item.MovieID })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="8" class="text-center">
+            @Html.ActionLink("添加新行", "Create", null, new { @class = "btn btn-primary" })
+        </td>
+    </tr>
+</table>
+<div>
+    @Html.ActionLink("返回主页", "Index", "Home", new { area = "" }, null)
+</div>
+

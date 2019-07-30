@@ -1,0 +1,123 @@
+﻿@model MyMovie.Areas.T3.Models.MovieTables
+
+@{
+    ViewBag.Title = "Details";
+}
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>
+<style>
+    #demo1 {
+        background-color: #b115b1;
+        font-size: 20px;
+    }
+</style>
+<div>
+    <div class="container" id="demo1" style="color:#ffffff">
+        <div class="col-md-7">
+            <img src="~/comment/ImageTotal/@Html.DisplayFor(model=>model.MovieImage)" style="height:350px;width:300px" alt="">
+        </div>
+        <div class="clo-md-4 col-md-offset-1">
+
+            <div>
+                <ul>
+                    <li>电影:@Html.DisplayFor(model => model.MovieName)</li>
+                    <li>类型：@Html.DisplayFor(model => model.MvType1)</li>
+                    <li>制片国家/地区：@Html.DisplayFor(model => model.Areas)</li>
+                    <li>语言：@Html.DisplayFor(model => model.Language)</li>
+                    <li>上映时间：@Html.DisplayFor(model => model.ShowTime)</li>
+                    <li>片长;@Html.DisplayFor(model => model.Length)分钟</li>
+                    <li>累计票房：@Html.DisplayFor(model => model.Profit)</li>
+                </ul>
+            </div>
+            <div>
+                <button  class="btn btn-primary" style="color:#ff0000">  想看</button>
+                <label class="font:15px" id="result"></label>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div>
+            <h3>剧情简介</h3>
+            <div>
+                @Html.DisplayFor(model => model.Content)
+            </div>
+        </div>
+        <div>
+            <h3>导演</h3>
+            <ul class="list-inline">
+                <li>
+                    <img src="~/comment/Editors/@Html.DisplayFor(model=>model.EdImage1)" style="width:150px;height:200px" />
+                    <div>@Html.DisplayFor(model => model.EditorName1)</div>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <div>
+            <h3>主演</h3>
+
+            <ul class="list-inline">
+
+                <li>
+                    <img src="~/comment/Actors/@Html.DisplayFor(model=>model.AcImage1)" style="width:150px;height:200px" />
+                    <div>@Html.DisplayFor(model => model.Actor1)</div>
+
+                </li>
+                <li>
+                    <img src="~/comment/Actors/@Html.DisplayFor(model=>model.AcImage2)" style="width:150px;height:200px" />
+                    <div>@Html.DisplayFor(model => model.Actor2)</div>
+                </li>
+                <li>
+                    <img src="~/comment/Actors/@Html.DisplayFor(model=>model.AcImage3)" style="width:150px;height:200px" />
+                    <div>@Html.DisplayFor(model => model.Actor3)</div>
+
+                </li>
+            </ul>
+
+
+
+        </div>
+        <div>
+            <h3>奖项</h3>
+            <ul class="list-inline">
+                <li>
+                    <img src="~/comment/Awards/@Html.DisplayFor(model=>model.AwImage1)" style="width:150px;height:200px" />
+                    <ul>
+                        <li>@Html.DisplayFor(Model => Model.AwardName1)</li>
+                        <li>@Html.DisplayFor(Model => Model.AwTpye1)</li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="~/comment/Awards/@Html.DisplayFor(model=>model.AwImage2)" style="width:150px;height:200px" />
+                    <ul>
+                        <li>@Html.DisplayFor(Model => Model.AwardName2)</li>
+                        <li>@Html.DisplayFor(Model => Model.AwTpye2)</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+        <div>
+            <h3>图集</h3>
+
+            <img src="~/comment/ImageTotal/@Html.DisplayFor(model=>model.Image1)" style="float:left;width:150px;height:200px" />
+
+            <img src="~/comment/ImageTotal/@Html.DisplayFor(model=>model.Image2)" style="float:left;width:150px;height:200px" />
+            <img src="~/comment/ImageTotal/@Html.DisplayFor(model=>model.Image3)" style="float:left;width:150px;height:200px" />
+        </div>
+
+    </div>
+</div>
+<script>
+    var a = @Html.DisplayFor(model=>model.Appraise);
+    $("button").click(function () {
+      
+        
+        $("#result").text(a++);
+    });
+</script>
+

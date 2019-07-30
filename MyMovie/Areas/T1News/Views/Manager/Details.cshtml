@@ -1,0 +1,25 @@
+﻿@model MyMovie.Areas.T1News.Models.Local.NewsDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>当前位置：新闻详细</h2>
+<p>
+    @Html.ActionLink("返回首页", "Manager")
+</p>
+
+<div class="container">
+    <h4 class="text-center">@Html.DisplayFor(model => model.Title)</h4>
+    <hr />
+    <ul class="list-inline">
+        <li>作者：@Html.DisplayFor(model => model.Author)</li>
+        <li>类别：@Html.DisplayFor(model => model.ClassesName)</li>
+        <li>出处：@Html.DisplayFor(model => model.Original)</li>
+    </ul>
+    <div class="text-left thumbnail">
+        @Html.Raw(Model.Content)
+
+    </div>
+
+</div>

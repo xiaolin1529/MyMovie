@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MyMovie.Areas.T1News.Models.News>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>欢迎来到MyMovie 的 新闻模块</h2>
+
+
+
+@foreach (var item in Model)
+{
+    <li class="list-group-item">
+        @Html.ActionLink(@item.Title, "Details", new { id = item.NewID })
+
+        <span class="badge">@Html.DisplayFor(model => item.Author)</span>
+    </li>
+
+}

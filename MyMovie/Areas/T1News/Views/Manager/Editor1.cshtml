@@ -1,0 +1,44 @@
+﻿@model MyMovie.Areas.T1News.Models.Local.NewsDetails
+
+
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Table</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+      
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Content, htmlAttributes: new { @id = "neirong" })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+@Scripts.Render("~/bundles/jqueryval", "~/umeditor/third-party/jquery.min.js", "~/umeditor/umeditor.config.js", "~/umeditor/umeditor.min.js")
+    @Scripts.Render("~/bundles/jqueryval", "~/ueditor/ueditor.config.js", "~/ueditor/ueditor.all.js")
+    <script type="text/javascript">
+        var nreditor = UE.getEditor('neirong');
+      
+    </script>
+}

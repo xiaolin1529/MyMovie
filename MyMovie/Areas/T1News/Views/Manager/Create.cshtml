@@ -1,0 +1,81 @@
+﻿@model MyMovie.Areas.T1News.Models.Local.NewsDetails
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>添加新闻</h2>
+<div>
+    @Html.ActionLink("返回首页", "Manager")
+</div>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>News</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClassesName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+            @Html.DropDownListFor(model => model.ClassesName, new SelectList(new List<SelectListItem>() { new SelectListItem() { Text = "流行", Value = "流行" }, new SelectListItem() { Text = "魔幻", Value = "魔幻" }, new SelectListItem() { Text = "人文", Value = "人文" }, new SelectListItem() { Text = "爱情", Value = "爱情" }, new SelectListItem() { Text = "冒险", Value = "冒险" } }, "Value", "Text"), new { htmlAttributes = new { @class = "form-control" } })
+           @Html.ValidationMessageFor(model => model.ClassesName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Original, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Original, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Original, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Content, htmlAttributes: new { @id = "neirong" })
+                
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval", "~/ueditor/ueditor.config.js", "~/ueditor/ueditor.all.js")
+    <script type="text/javascript">
+        var nreditor = UE.getEditor('neirong');
+    </script>
+
+}

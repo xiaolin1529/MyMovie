@@ -1,0 +1,63 @@
+﻿@model MyMovie.Areas.Message.Models.W_message
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/layui/css/layui.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<div class="layui-row layui-form">
+
+    @*<table class="table table-bordered">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.User)</th>
+            <th>@Html.DisplayNameFor(model => model.Content)</th>
+            <th>@Html.DisplayNameFor(model => model.CreateTime)</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.User)</td>
+                <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                <td>@Html.DisplayFor(modelItem => item.CreateTime)</td>
+                @*<td>
+                    @Html.ActionLink("回复", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("删除", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </table>*@
+
+    <form method="post">
+        @*<input type="hidden" value="@articleid" name="id" id="id" />*@
+        <ul class="layui-timeline">
+            @*<li class="layui-timeline-item"></li>*@
+            <li class="layui-timeline-item">
+                <h4>##   评论</h4>
+                <i class="layui-icon layui-timeline-axis"></i>
+                <div class="layui-timeline-content right-con">
+                    <textarea name="content" id="content" rows="4" class="layui-textarea" placeholder="说点什么吧"></textarea>
+                </div>
+            </li>
+            <li class="layui-timeline-item">
+                <div class="layui-timeline-content right-con name-input">
+                    <button id="submitButton" class="layui-btn zb-btn" lay-filter="articlereply" lay-submit> 发表评论 </button>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+<script type="text/javascript">
+
+    $(function () {
+        $("#submitButton").click(function () {
+            var data = $('#content').val();
+            $.post('@Url.Action("Index", "Message")', { frontViewData: data }, function () {
+                alert("submit data is OK!");
+            });
+        });
+    });
+
+</script>
+
+

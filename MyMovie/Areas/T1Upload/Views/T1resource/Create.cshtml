@@ -1,0 +1,53 @@
+﻿@model System.Web.HttpContextBase
+
+@{
+    ViewBag.Title = "Create";
+   
+}
+
+<h2>欢迎您为本站添砖加瓦！</h2>
+
+@using (Html.BeginForm("Upload", "T1resource", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>添加资源</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                资源名称
+              <input name="name" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            
+            <div class="col-md-10">
+                选择上传文件
+                <input name="file" type="file" id="file" />
+            </div>
+        </div>
+        <div class="form-group">
+          
+            <div class="col-md-10">
+                补充信息
+              <input name="other"/>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="添加" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("我觉的我的资源不够好，下一次再来", "Index")
+</div>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+
+    @Styles.Render("~/Content/themes/base/jqueryui")
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @Scripts.Render("~/bundles/jquery-unobtrusive-ajax")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/texiao")
+    
+    <link href="~/CSS/lunbo.css" rel="stylesheet" />
+
+
+</head>
+@{
+    var ajaxOptions = new AjaxOptions
+    {
+        LoadingElementId = "loading",
+        UpdateTargetId = "mainWindow",
+        OnFailure = "OnFailure"
+    };
+}
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0066B3">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("我的电影", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="item">@Html.ActionLink("主页", "Index", "Home")</li>
+                    <li class="item">@Html.ActionLink("关于", "About", "Home")</li>
+                    <li class="item">@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                </ul>
+               
+                <ul id="loading" class="nav navbar-text navbar-right" style="display: none; color: white;">
+                    <li>（正在加载，请稍等...）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row clearfix">
+        <div class="col-md-2 column col-md-offset-1">
+            <h2>
+                我的电影
+            </h2>
+            <p>
+                来自电影发烧友的一个服务平台，一直致力于帮助都市人群发现有价值的电影。
+            </p>
+            <p>
+                <a class="btn" href="#">了解更多</a>
+            </p>
+        </div>
+        <div class="col-md-6 col-md-offset-1 carousel slide">
+            @Html.Partial("LunBo")
+        </div>
+        <div class="col-md-2">
+          
+          
+            <button class="btn-info">  @Ajax.ActionLink("资源入口", "Index", "T1resource", new { area = "T1Upload" }, ajaxOptions, new { @class = "list-group-item" })</button>
+         
+          @*@Html.Partial("Shengdanshu")*@
+        </div>
+    </div>
+    <div class="body-content" style="border:2px solid #EFEFEF;border-radius:7px; margin-top:40px; padding:10px; overflow-y:auto; overflow-x:hidden">
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="leftMenu" style="margin-top:10px">
+
+                    <h3 class="btn-primary">新闻通知</h3>
+                    <div class="list-group">
+                        @Ajax.ActionLink("新闻浏览", "Index", "Index", new { area = "T1News" }, ajaxOptions, new { @class = "list-group-item" })
+                        @Ajax.ActionLink("消息管理", "Index", "Manager", new { area = "T1News" }, ajaxOptions, new { @class = "list-group-item" })
+                    </div>
+
+                   
+
+                    <h3 class="btn-primary">爱电影</h3>
+                    <div class="list-group">
+                        @Ajax.ActionLink("选电影", "Index", "MovieTables", new { area = "T3" }, ajaxOptions, new { @class = "list-group-item" })
+                        @Ajax.ActionLink("管理员添加", "Register", "MovieTables", new { area = "T3" }, ajaxOptions, new { @class = "list-group-item" })
+                    </div>
+
+                    <h3 class="btn-primary">欢迎购票</h3>
+                    <div class="list-group">
+                        @Ajax.ActionLink("点此选票", "Index", "T2Movie", new { area = "T2" }, ajaxOptions, new { @class = "list-group-item" })
+                    </div>
+
+
+                    <h3 class="btn-primary">留言板</h3>
+                    <div class="list-group">
+                        @Ajax.ActionLink("留言板", "Index", "Message", new { area = "Message" }, ajaxOptions, new { @class = "list-group-item" })
+                    </div>
+                    @*从这里编辑你的模块入口*@
+
+                    
+
+                    @*从这里结束编辑你的模块入口*@
+                </div>
+            </div>
+            <div class="col-md-9">
+
+
+                <div>
+                    <div id="mainWindow" class="container body-content" style="border:2px solid blue;margin-top:10px; padding:10px; overflow-y:auto; overflow-x:hidden">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr />
+
+    </div>
+    <footer class="navbar bottom" style="margin:auto">
+        <div class="row" style="height:auto;background-color:#025A9D;margin:auto">
+            <ul class="nav navbar-nav text-center">
+                <li class="item"><a href="" title="我的电影">友情链接</a></li>
+                <li class="item"><a href="https://www.douban.com" title="https://www.douban.com">豆瓣网</a></li>
+                <li class="item"><a href="https://dianying.taobao.com" title="https://dianying.taobao.com">淘票票</a></li>
+                <li class="item"><a href="https://maoyan.com/" title="https://maoyan.com/">猫眼电影</a></li>
+                <li class="item"><a href="https://www.dytt8.net/" title="https://www.dytt8.net/">电影天堂</a></li>
+                <li class="item"><a href="http://www.1905.com/" title="http://www.1905.com/">1905电影网</a></li>
+                <li class="item"><a href="http://movie.le.com/" title="http://movie.le.com/">Le电影</a></li>
+                <li class="item"><a href="https://www.iqiyi.com/dianying/" title="https://www.iqiyi.com/dianying/">爱奇艺电影</a></li>
+            </ul>
+        </div>
+        <div class="row text-center btn-info" style="height:40px">&copy; @DateTime.Now.Year - 我的电影</div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            var menu = $(".leftMenu");
+            menu.accordion({ collapsible: true });
+            $("#mainWindow").css({ minHeight: menu.height() });
+        });
+        function OnFailure(xhr) {
+            $("body").html(xhr.responseText);
+        }
+    </script>
+  
+    @RenderSection("scripts", required: false)
+   
+</body>
+</html>

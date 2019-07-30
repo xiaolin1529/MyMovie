@@ -1,0 +1,59 @@
+﻿@model MyMovie.Areas.T1News.Models.Local.DetailsAll
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>您当前位置：新闻</h2>
+<p>
+    @Html.ActionLink("返回首页", "Index")
+</p>
+
+<div class="container">
+    @{
+        var i = Model.newsDetails;
+        <h4 class="text-center">@Html.DisplayFor(model => i.Title)</h4>
+        <hr />
+        <ul class="list-inline">
+
+            <li>作者：@Html.DisplayFor(model => i.Author)</li>
+            <li>类别：@Html.DisplayFor(model => i.ClassesName)</li>
+            <li>出处：@Html.DisplayFor(model => i.Original)</li>
+        </ul>
+        <div class="text-left thumbnail">
+            @Html.Raw(Model.newsDetails.Content)
+
+        </div>
+
+    }
+
+    <div class="row">
+        <h2>评论区</h2>
+        <ul>
+            @foreach (var item in Model.NewsRe)
+            {
+                <li class="list-group-item">
+                   <p5>@item.ahthor</p5> 说：
+                    <text>@item.content</text>   
+                </li>
+            }
+        </ul>
+        <button class="btn-info">@Html.ActionLink("我也来说说", "AddRe", new { id = Model.newsDetails.NewID })</button>
+    </div>
+
+
+    <div class="bottom">
+        <h2>您可能感兴趣</h2>
+        <ul>
+            @foreach (var item in Model.SameClassNews)
+            {
+                <li class="list-group-item">
+                    <span class="label center-align">
+                        @Html.ActionLink(@item.Title, "Details", new { id = item.NewID })
+                    </span>
+                    <span class="badge">@Html.DisplayFor(model => item.ClassesName)</span>
+                </li>
+            }
+        </ul>
+    </div>
+
+</div>

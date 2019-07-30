@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MyMovie.Areas.T2.Models.T2Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="movies-list">
+    <ul class="movie-list list-inline">
+        @foreach (var item in Model)
+        {
+            <li>
+                <div class="movie-item">
+                    <div class="movie-poster">
+                        <img class="poster-default" src="@Html.DisplayFor(modelItem => item.MovieImage)" style="height:150px;width:125px" />
+
+                    </div>
+                    <div class="movie-ver"><i class="m3d"></i></div>
+                </div>
+                <div class="channel-detail movie-item-title" title="@Html.DisplayFor(modelItem => item.MovieName)">
+                    <a href="@Url.Action("Index","T2Cinema",new{area="T2",id=item.MovieId})" target="_blank" data-act="movies-click" data-val="{movieId:345036}">@Html.DisplayFor(modelItem => item.MovieName)</a>
+                </div>
+
+            </li>
+        }
+    </ul>
+</div>
+

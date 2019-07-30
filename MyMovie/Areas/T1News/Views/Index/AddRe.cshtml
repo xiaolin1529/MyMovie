@@ -1,0 +1,57 @@
+﻿@model MyMovie.Areas.T1News.Models.T1NewsRe
+
+@{
+    var a1 = new { @class = "col-md-2 control-label" };
+    var a2 = "col-md-10";
+    var a3 = new { htmlAttributes = new { @class = "form-control" } };
+    var a4 = new { @class = "text-danger" };
+}
+<style>
+    input {
+        max-width: 200px;
+    }
+</style>
+
+<div id="myModal" class="modal fade">
+    @using (Html.BeginForm("AddRe1", "Index", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header btn-info">
+                    <h4 class="modal-title">添加评论</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", a4)
+                        <div class="form-group">
+                        
+                            <div class="@a2">
+                                作者
+                               <input name="author" value="@HttpContext.Current.Request.UserHostAddress"/>
+                                <input class="hidden" name="nid" value="@Model.NewsID" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                           
+                            <div class="@a2">
+                                评论
+                                <input name="content" value="真好" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-block text-right">
+                        <input type="submit" value="确定" class="btn btn-primary" />
+                        <a class="btn btn-primary" href="@Url.Action("Details","Index",new{area="T1News",id=Model.NewsID})">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<script>
+    $("#myModal").modal();
+</script>
+

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var action = Url.Action("Login", "Manager");
+}
+
+<form method="post" class="cmxform" id="form1" action="@action">
+    <fieldset>
+        <legend>登录框</legend>
+        <p>
+            <label for="user">用户</label>
+            <input id="user" name="user" required minlength="3">
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input id="password" type="password" maxlength="12" name="password" required minlength="5">
+        </p>
+        <p>
+            <input class="submit" type="submit" value="登陆">
+        </p>
+    </fieldset>
+</form>

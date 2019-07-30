@@ -1,0 +1,1351 @@
+﻿
+
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+
+    <link rel="dns-prefetch" href="//p0.meituan.net" />
+    <link rel="dns-prefetch" href="//p1.meituan.net" />
+    <link rel="dns-prefetch" href="//ms0.meituan.net" />
+    <link rel="dns-prefetch" href="//ms1.meituan.net" />
+    <link rel="dns-prefetch" href="//analytics.meituan.com" />
+    <link rel="dns-prefetch" href="//report.meituan.com" />
+    <link rel="dns-prefetch" href="//frep.meituan.com" />
+
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="cleartype" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>"use strict";!function(){var i=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"_Owl_",n=window;n[i]||(n[i]={isRunning:!1,isReady:!1,preTasks:[],dataSet:[],use:function(i,t){this.isReady&&n.Owl&&n.Owl[i](t),this.preTasks.push({api:i,data:[t]})},add:function(i){this.dataSet.push(i)},run:function(){var t=this;if(!this.isRunning){this.isRunning=!0;var i=n.onerror;n.onerror=function(){this.isReady||this.add({type:"jsError",data:arguments}),i&&i.apply(n,arguments)}.bind(this),(n.addEventListener||n.attachEvent)("error",function(i){t.isReady||t.add({type:"resError",data:[i]})},!0)}}},n[i].run())}();</script>
+    <script>
+  cid = "c_2yzd0xp5";
+  ci = 235;
+    window.system = {"seatsPrice":{"1":{"expression":"27.9X1","price":"27.9"},"2":{"expression":"27.9X2","price":"55.8"},"3":{"expression":"27.9X3","price":"83.7"},"4":{"expression":"27.9X4","price":"111.6"},"5":{"expression":"27.9X5","price":"139.5"}},"remind":"","uuid":"9DF8BB90029411E9A24717467B2FF0CF6AEB7181A5344CD69CA46A4BAED67A6B","cinemaId":6863};
+
+  window.openPlatform = '';
+  window.openPlatformSub = '';
+
+    </script>
+    <link rel="stylesheet" href="//ms0.meituan.net/mywww/common.4b838ec3.css" />
+    <link rel="stylesheet" href="//ms0.meituan.net/mywww/cinemas-seat.b8adee6e.css" />
+    <script crossorigin="anonymous" src="//ms0.meituan.net/mywww/stat.74891044.js"></script>
+    <script>if(window.devicePixelRatio >= 2) { document.write('<link rel="stylesheet" href="//ms0.meituan.net/mywww/image-2x.8ba7074d.css"/>') }</script>
+
+
+</head>
+<body>
+
+
+    <div class="header-placeholder"></div>
+
+
+    <div class="container" id="app" class="page-cinemas/seat">
+        <div class="order-progress-bar">
+            <div class="step first done">
+                <span class="step-num">1</span>
+                <div class="bar"></div>
+                <span class="step-text">选择影片场次</span>
+            </div>
+            <div class="step done">
+                <span class="step-num">2</span>
+                <div class="bar"></div>
+                <span class="step-text">选择座位</span>
+            </div>
+            <div class="step ">
+                <span class="step-num">3</span>
+                <div class="bar"></div>
+                <span class="step-text">14分钟内付款</span>
+            </div>
+            <div class="step last ">
+                <span class="step-num">4</span>
+                <div class="bar"></div>
+                <span class="step-text">影院取票观影</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main clearfix">
+        <div class="hall">
+            <div class="seat-example">
+                <div class="selectable-example example">
+                    <span>可选座位</span>
+                </div>
+                <div class="sold-example example">
+                    <span>已售座位</span>
+                </div>
+                <div class="selected-example example">
+                    <span>已选座位</span>
+                </div>
+                <div class="couple-example example">
+                    <span>情侣座位</span>
+                </div>
+
+            </div>
+
+
+            <div class="seats-block" data-cols="18" data-section-id="1" data-section-name="3号厅" data-seq-no="201812180024664">
+                <div class="row-id-container">
+                    <span class="row-id">1</span>
+                    <span class="row-id">2</span>
+                    <span class="empty-row-id"></span>
+                    <span class="row-id">3</span>
+                    <span class="row-id">4</span>
+                    <span class="row-id">5</span>
+                    <span class="row-id">6</span>
+                    <span class="row-id">7</span>
+                    <span class="row-id">8</span>
+                    <span class="row-id">9</span>
+                </div>
+
+                <div class="seats-container">
+                    <div class="screen-container">
+                        <div class="screen">银幕中央</div>
+                        <div class="c-screen-line"></div>
+                        @*<a href="@Url.Action("Index3","T2",new{area="T2"})" class="btn btn-primary">确认支付</a>*@
+                    </div>
+
+
+
+                    <div class="seats-wrapper">
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="17"
+                                  data-row-id="1"
+                                  data-no="41021601#10#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="16"
+                                  data-row-id="1"
+                                  data-no="41021601#10#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="15"
+                                  data-row-id="1"
+                                  data-no="41021601#10#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="1"
+                                  data-no="41021601#10#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="1"
+                                  data-no="41021601#10#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="1"
+                                  data-no="41021601#10#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="1"
+                                  data-no="41021601#10#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="1"
+                                  data-no="41021601#10#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="1"
+                                  data-no="41021601#10#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="1"
+                                  data-no="41021601#10#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="1"
+                                  data-no="41021601#10#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="1"
+                                  data-no="41021601#10#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="1"
+                                  data-no="41021601#10#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="1"
+                                  data-no="41021601#10#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="1"
+                                  data-no="41021601#10#04"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="1"
+                                  data-no="41021601#10#03"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="1"
+                                  data-no="41021601#10#02"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="1"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="17"
+                                  data-row-id="2"
+                                  data-no="41021601#09#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="16"
+                                  data-row-id="2"
+                                  data-no="41021601#09#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="15"
+                                  data-row-id="2"
+                                  data-no="41021601#09#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="2"
+                                  data-no="41021601#09#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="2"
+                                  data-no="41021601#09#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="2"
+                                  data-no="41021601#09#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="2"
+                                  data-no="41021601#09#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="2"
+                                  data-no="41021601#09#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="2"
+                                  data-no="41021601#09#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="2"
+                                  data-no="41021601#09#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="2"
+                                  data-no="41021601#09#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="2"
+                                  data-no="41021601#09#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="2"
+                                  data-no="41021601#09#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="2"
+                                  data-no="41021601#09#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="2"
+                                  data-no="41021601#09#04"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="2"
+                                  data-no="41021601#09#03"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="2"
+                                  data-no="41021601#09#02"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="2"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="empty-row"></div>
+                        <div class="row">
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="3"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="3"
+                                  data-no="41021601#07#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="3"
+                                  data-no="41021601#07#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="3"
+                                  data-no="41021601#07#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="3"
+                                  data-no="41021601#07#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="3"
+                                  data-no="41021601#07#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="3"
+                                  data-no="41021601#07#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="3"
+                                  data-no="41021601#07#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="3"
+                                  data-no="41021601#07#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="3"
+                                  data-no="41021601#07#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="3"
+                                  data-no="41021601#07#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="3"
+                                  data-no="41021601#07#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="3"
+                                  data-no="41021601#07#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="3"
+                                  data-no="41021601#07#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="3"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="3"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="3"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="3"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="4"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="4"
+                                  data-no="41021601#06#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="4"
+                                  data-no="41021601#06#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="4"
+                                  data-no="41021601#06#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="4"
+                                  data-no="41021601#06#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="4"
+                                  data-no="41021601#06#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="4"
+                                  data-no="41021601#06#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="4"
+                                  data-no="41021601#06#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="4"
+                                  data-no="41021601#06#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="4"
+                                  data-no="41021601#06#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="4"
+                                  data-no="41021601#06#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="4"
+                                  data-no="41021601#06#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="4"
+                                  data-no="41021601#06#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="4"
+                                  data-no="41021601#06#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="4"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="4"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="4"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="4"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="5"
+                                  data-no="41021601#05#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="5"
+                                  data-no="41021601#05#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="5"
+                                  data-no="41021601#05#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="5"
+                                  data-no="41021601#05#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="5"
+                                  data-no="41021601#05#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="5"
+                                  data-no="41021601#05#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="5"
+                                  data-no="41021601#05#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="5"
+                                  data-no="41021601#05#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="5"
+                                  data-no="41021601#05#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="5"
+                                  data-no="41021601#05#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="5"
+                                  data-no="41021601#05#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="5"
+                                  data-no="41021601#05#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="5"
+                                  data-no="41021601#05#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="5"
+                                  data-no="41021601#05#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="5"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="5"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="5"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="5"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="6"
+                                  data-no="41021601#04#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="6"
+                                  data-no="41021601#04#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="6"
+                                  data-no="41021601#04#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="6"
+                                  data-no="41021601#04#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="6"
+                                  data-no="41021601#04#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="6"
+                                  data-no="41021601#04#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="6"
+                                  data-no="41021601#04#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="6"
+                                  data-no="41021601#04#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat sold"
+                                  data-column-id="6"
+                                  data-row-id="6"
+                                  data-no="41021601#04#10"
+                                  data-st="LK"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat sold"
+                                  data-column-id="5"
+                                  data-row-id="6"
+                                  data-no="41021601#04#09"
+                                  data-st="LK"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="6"
+                                  data-no="41021601#04#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="6"
+                                  data-no="41021601#04#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="6"
+                                  data-no="41021601#04#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="6"
+                                  data-no="41021601#04#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="6"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="6"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="6"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="6"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="16"
+                                  data-row-id="7"
+                                  data-no="41021601#03#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="15"
+                                  data-row-id="7"
+                                  data-no="41021601#03#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="7"
+                                  data-no="41021601#03#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="7"
+                                  data-no="41021601#03#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="7"
+                                  data-no="41021601#03#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="7"
+                                  data-no="41021601#03#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="7"
+                                  data-no="41021601#03#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="7"
+                                  data-no="41021601#03#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="7"
+                                  data-no="41021601#03#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="7"
+                                  data-no="41021601#03#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="7"
+                                  data-no="41021601#03#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="7"
+                                  data-no="41021601#03#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="7"
+                                  data-no="41021601#03#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="7"
+                                  data-no="41021601#03#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="7"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="7"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="7"
+                                  data-no="41021601#03#02"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="7"
+                                  data-no="41021601#03#01"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="16"
+                                  data-row-id="8"
+                                  data-no="41021601#02#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="15"
+                                  data-row-id="8"
+                                  data-no="41021601#02#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="8"
+                                  data-no="41021601#02#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="8"
+                                  data-no="41021601#02#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="8"
+                                  data-no="41021601#02#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="8"
+                                  data-no="41021601#02#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="8"
+                                  data-no="41021601#02#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="8"
+                                  data-no="41021601#02#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="8"
+                                  data-no="41021601#02#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="8"
+                                  data-no="41021601#02#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="8"
+                                  data-no="41021601#02#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="8"
+                                  data-no="41021601#02#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="8"
+                                  data-no="41021601#02#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="8"
+                                  data-no="41021601#02#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="8"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat empty"
+                                  data-column-id=""
+                                  data-row-id="8"
+                                  data-no=""
+                                  data-st="E"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="8"
+                                  data-no="41021601#02#02"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="8"
+                                  data-no="41021601#02#01"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                        <div class="row">
+                            <span class="seat selectable"
+                                  data-column-id="18"
+                                  data-row-id="9"
+                                  data-no="41021601#01#18"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="17"
+                                  data-row-id="9"
+                                  data-no="41021601#01#17"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="16"
+                                  data-row-id="9"
+                                  data-no="41021601#01#16"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="15"
+                                  data-row-id="9"
+                                  data-no="41021601#01#15"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="14"
+                                  data-row-id="9"
+                                  data-no="41021601#01#14"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="13"
+                                  data-row-id="9"
+                                  data-no="41021601#01#13"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="12"
+                                  data-row-id="9"
+                                  data-no="41021601#01#12"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="11"
+                                  data-row-id="9"
+                                  data-no="41021601#01#11"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="10"
+                                  data-row-id="9"
+                                  data-no="41021601#01#10"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="9"
+                                  data-row-id="9"
+                                  data-no="41021601#01#09"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="8"
+                                  data-row-id="9"
+                                  data-no="41021601#01#08"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="7"
+                                  data-row-id="9"
+                                  data-no="41021601#01#07"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="6"
+                                  data-row-id="9"
+                                  data-no="41021601#01#06"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="5"
+                                  data-row-id="9"
+                                  data-no="41021601#01#05"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="4"
+                                  data-row-id="9"
+                                  data-no="41021601#01#04"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="3"
+                                  data-row-id="9"
+                                  data-no="41021601#01#03"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="2"
+                                  data-row-id="9"
+                                  data-no="41021601#01#02"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                            <span class="seat selectable"
+                                  data-column-id="1"
+                                  data-row-id="9"
+                                  data-no="41021601#01#01"
+                                  data-st="N"
+                                  data-act="seat-click"
+                                  data-bid="b_s7eiiijf"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="side">
+
+
+            <div class="show-info">
+                <div class="info-item">
+                    <span>请确定场次信息</span>
+                    <p class="value">@ViewBag.Result</p>
+                </div>
+
+            </div>
+            <div>
+
+                <a href="@Url.Action("Index3","T2",new{area="T2"})" class="btn btn-primary">确定</a>
+
+            </div>
+        </div>
+
+
+
+
+        @*</div>*@
+
+
+        <div class="footer">
+
+            <p class="friendly-links">
+                友情链接 :
+                <a href="http://www.meituan.com" data-query="utm_source=wwwmaoyan" target="_blank">美团网</a>
+                <span></span>
+                <a href="http://i.meituan.com/client" data-query="utm_source=wwwmaoyan" target="_blank">美团下载</a>
+                <span></span>
+                <a href="https://www.huanxi.com" data-query="utm_source=maoyan_pc" target="_blank">欢喜首映</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.7.11.js"></script>
+    <script>
+      Owl.start({
+        project: 'com.sankuai.movie.fe.mywww',
+        pageUrl: location.href.split('?')[0].replace(/\/\d+/g, '/:id'),
+        devMode: false
+      })
+      // 单独自定义上报下img加载错误
+      window.addEventListener('error', function(e) {
+        var node = e.target || e.srcElement
+        try {
+          var msg = node.src || node.href
+          var nodeName = node.nodeName
+          if (nodeName && nodeName.toLowerCase() === 'img') {
+            Owl.addError(msg, {level: 'warn', category: 'resourceError'})
+          }
+        } catch(err) {
+          console.error(err)
+        }
+      }, true)
+    </script>
+    <!--[if IE 8]><script crossorigin="anonymous" src="//ms0.meituan.net/mywww/es5-shim.bbad933f.js"></script><![endif]-->
+    <!--[if IE 8]><script crossorigin="anonymous" src="//ms0.meituan.net/mywww/es5-sham.d6ea26f4.js"></script><![endif]-->
+    <script crossorigin="anonymous" src="//ms0.meituan.net/mywww/common.1d573cd4.js"></script>
+    <script crossorigin="anonymous" src="//ms0.meituan.net/mywww/cinemas-seat.e3066af8.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+﻿@model MyMovie.Areas.T3.Models.MovieTables
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MovieTables</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Areas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Areas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MvType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MvType1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditorName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditorName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EdImage1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EdImage1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditorName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditorName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EdImage2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EdImage2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcImage1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcImage1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcImage2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcImage2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcImage3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcImage3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwardName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwardName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwTpye1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwTpye1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwImage1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwImage1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwardName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwardName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwTpye2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwTpye2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwImage2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwImage2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appraise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appraise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profit)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+           @Html.ActionLink("返回", "Add")
+        </div>
+    }
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MyMovie.Areas.T1Upload.Models.T1resource>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">资源天地</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+           资源id
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            
+            <a href="~/ResourceFile/@Html.DisplayFor(modelItem => item.path)">下载</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other)
+        </td>
+        <td>
+           @Html.ActionLink("删除资源", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+@Html.ActionLink("加入我们", "Create")

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MyMovie.Areas.T1News.Models.News>
+
+
+<h2>新闻公告</h2>
+
+<p>
+    @Html.ActionLink("添加新闻", "Create")
+</p>
+
+@*@foreach (var item in Model)
+    {
+        <li class="list-group-item">
+
+            @Html.ActionLink(@item.Title, "Details", new { id = item.NewID })
+            <span class="badge">@Html.DisplayFor(model => item.UpdateTime)</span>
+        </li>
+    }*@
+<table class="table table-bordered" style='table-layout:fixed;'>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NewID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Original)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewID)
+            </td>
+            <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Original)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Editor", new { id = item.NewID }) |
+                @Html.ActionLink("详细", "Details", new { id = item.NewID }) |
+                @Html.ActionLink("删除", "Delete", new { id = item.NewID })
+            </td>
+        </tr>
+    }
+
+</table>

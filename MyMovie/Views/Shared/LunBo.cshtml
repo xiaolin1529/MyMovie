@@ -1,0 +1,95 @@
+﻿<link href="~/CSS/lunbo.css" rel="stylesheet" />
+
+ <div id="NewsCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <li class='ui-slide-item'>
+                   
+                    <div class="gallery-frame">
+                        <a href="@Url.Action("Details","Index",new{area="T1News",id=8})" target="_blank" data-fid="3210">
+                            <img src="~/Images/id8.jpg" alt="2018最后的神剧！看好莱坞教父毒舌日常" width="350" height="240" />
+                        </a>
+                        <div class="gallery-detail">
+                            <div class="gallery-hd">
+                                <a href="@Url.Action("Details","Index",new{area="T1News",id=8})" target="_blank" data-fid="3210">
+                                    <h3>2018最后的神剧！看好莱坞教父毒舌日常</h3>
+                                </a>
+                            </div>
+                            <div class="gallery-bd">
+                                <p>
+                                    最美不过夕阳红~
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </div>
+            <div class="item">
+                <li class='ui-slide-item'>
+
+                    <div class="gallery-frame">
+                        <a href="@Url.Action("Details","Index",new{area="T1News",id=7})" target="_blank" data-fid="3211">
+                            <img src="~/Images/id7.jpg" alt="豆瓣9分最燃超级英雄电影！惊喜彩蛋爽翻天" width="350" height="240" />
+                        </a>
+                        <div class="gallery-detail">
+                            <div class="gallery-hd">
+                                <a href="@Url.Action("Details","Index",new{area="T1News",id=7})" target="_blank" data-fid="3211">
+                                    <h3>豆瓣9分最燃超级英雄电影！惊喜彩蛋爽翻天</h3>
+                                </a>
+                            </div>
+                            <div class="gallery-bd">
+                                <p>
+                                    吹爆《蜘蛛侠：平行宇宙》！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+            </div>
+            <div class="item">
+                <li class='ui-slide-item'>
+
+                    <div class="gallery-frame">
+                        <a href="@Url.Action("Details","Index",new{area="T1News",id=9})" target="_blank" data-fid="3208">
+                            <img src="~/Images/id9.jpg" alt="麦兆辉：我重视的是类型片的人物" width="350" height="240" />
+                        </a>
+                        <div class="gallery-detail">
+                            <div class="gallery-hd">
+                                <a href="@Url.Action("Details","Index",new{area="T1News",id=9})" target="_blank" data-fid="3208">
+                                    <h3>麦兆辉：我重视的是类型片的人物</h3>
+                                </a>
+                            </div>
+                            <div class="gallery-bd">
+                                <p>
+                                    “港片的生存空间一直很有限”。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#NewsCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#NewsCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <script>
+ $(function () { $("#NewsCarousel").carousel('cycle') });
+    </script>
